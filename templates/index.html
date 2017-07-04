@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <title>Home | Directed Energy</title>
+{% endblock %}
+
+{% block body %}
+    
+    <!-- Main Hero Image -->
+    <div class="ensemble-slideshow-container">
+        <div class="ensemble-slideshow__first-slide">
+            <img src="{{ url_for('static', filename='img/space-background.jpg') }}" alt="Slide image">
+            <div class="ensemble-slideshow__layer ensemble-slideshow__layer-center ">
+                <div class="ensemble-slideshow__caption animate__fade-in-right">
+                    <img class="slider-heading__light-background" src="{{ url_for('static', filename='img/caption1.png') }}" alt="">
+                </div>
+                <div class="ensemble-slideshow__caption animate__fade-in-left margin-top-20">
+                    <img class="slider-heading__dark-background" src="{{ url_for('static', filename='img/caption2.png') }}" alt="Slide image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of section -->
+
+
+    <!-- Who Are We? -->
+    <div class="grid-container padding-top-100">
+        <div class="grid-row">
+            <div class="column-12">
+                <h4>Who We Are?</h4> 
+                <p class="text-uppercase font-size-h6 text-color-2">
+                    We focuses on transformational applications of directed energy for applications ranging from photonic power transmission to relativistic propulsion.
+                </p>
+            </div>
+        </div>
+    </div>   
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="column-12">
+                <p>
+                    We come from a major university environment with more than 4 decades of experience in technology and its applications from terrestrial to space missions.
+                    Our vision is to use new technological advances to better humanity through the synthesis of ideas and our core values. Our goal is to make possible that which is currently only a dream for many but whose reality can be realized.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End of section -->
+
+    <!-- Highlights -->
+    <section class="background-color-2">
+        <div class="grid-container-fluid margin-top-80">
+            <div class="grid-row">
+                <div class="column-1 padding-top-40 padding-bottom-40">
+                    <h4 class="vertical-text text-color-10">Highlights</h4>
+                </div>
+                <div class="column-11">
+                    <div class="grid-row">
+                        <div class="column-4 no-padding">
+                            <div class="overlay">
+                                <div class="overlay__background"></div>
+                                    <div class="overlay__content text-center text-color-2">
+                                        <span class="overlay__content-heading">Humanity Chip</span>
+                                        <span class="overlay__content-text">
+                                            <a class="link" alt="Humanity Chip - The first space time capsule that will include all of humanities thoughts, images, and DNA." href="{{ url_for('humanity_chip') }}"> View this project</a>
+                                        </span>
+                                    </div>
+                                <img src="{{ url_for('static', filename='img/item1.png') }}" alt="Humanity Chip" class="overlay__image overlay__image--skew">
+                            </div>
+                        </div>
+                        <div class="column-4 no-padding">
+                            <div class="overlay">
+                                <div class="overlay__background"></div>
+                                    <div class="overlay__content text-center text-color-2">
+                                        <span class="overlay__content-heading">
+                                        Space Based Laser Applications</span>
+                                        <span class="overlay__content-text">
+                                            <a class="text-color-1" alt="Applications of space based laser systems from relativistic propulsion that enable the first interstellar missions to defending the planet from asteroids and comets to long range power beaming to mitigating space debris among many others." href="{{ url_for('space_based_laser_applications') }}"> View this project</a>
+                                        </span>
+                                    </div>
+                                <img src="{{ url_for('static', filename='img/item2.jpg') }}" alt="Space Based Laser Applications" class="overlay__image overlay__image--skew">
+                            </div>
+                        </div>
+                        <div class="column-4 no-padding">
+                            <div class="overlay">
+                                <div class="overlay__background"></div>
+                                    <div class="overlay__content text-center text-color-2">
+                                        <span class="overlay__content-heading">Kickstarter</span>
+                                        <span class="overlay__content-text">
+                                            <a class="link" alt="Go check out our Kickstarter" href="{{ url_for('kickstarter') }}">View this project</a>
+                                        </span>
+                                    </div>
+                                <img src="{{ url_for('static', filename='img/item3.png') }}" alt="Go check out our Kickstarter" class="overlay__image overlay__image--skew">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of section -->
+
+    <!-- Research Progress -->
+    <section>
+        <div class="grid-container margin-top-100">
+            <div class="grid-row">
+                <div class="column-3">
+                    <h4>Our Work</h4>
+                </div>
+                <div class="column-9">
+                    <h6>
+                        We Have Over 370+ Published Articles and 10,000+ Views! Check them Out!
+                    </h6>
+                    <a href="http://deepspace.ucsb.edu" target="_blank" class="modal-open button text-color-10">University Work</a>
+                    <a href="https://www.researchgate.net/profile/Philip_Lubin" target="_blank" class="modal-open button text-color-10">ResearchGate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of section -->
+
+    <!-- Meet Our Founders -->
+    <section class="background-color-2">
+        <div class="grid-container-fluid margin-top-100">
+            <div class="grid-row">
+                <div class="column-1 padding-top-40 padding-bottom-40">
+                    <h4 class="vertical-text text-color-10">Meet our founder</h4>
+                </div>
+                <div class="column-11 no-padding">
+                    <div class="parallax">
+                        <div class="parallax__background parallax--banner-1"></div>
+                        <div class="grid-row no-margin">
+                            <div class="column-4">
+                                <div class="profile background-color-10">
+                                    <div class="profile__bio">
+                                        <p>
+                                            For the past seven years, we have been working with directed energy systems and their applications to space exploration. We are so optimistic about the future of directed energy for non-traditional applications that we started a company outside of our university-research environment to continue to explore the applications of directed energy systems.
+                                        </p>
+                                    </div>
+                                    <div class="profile__meta">
+                                        <span class="profile__meta-name font-size-h5"><span class="special-font"><!-- Directed Energy LLC. -->
+                                        Philip &amp; Travis</span></span>
+                                        <span class="profile__meta-position">Co-Founders</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of section -->
+
+    <!-- Media Coverage -->
+    <section class="margin-bottom-100">
+        <div class="grid-container text-center margin-top-100">
+            <h4>Our Media Coverages</h4>
+            <h6>Both our Kickstarter Campaign and University Work Have Gained Popular Recognition.</h6>
+            <p>Click on the logos to view some of the news articles.</p>
+
+            {% for path in params.news_logos %}
+                {% if loop.index % 4 == 1%}
+                <div class="grid-row">
+                <div class="column-12">
+                {% endif %}
+
+                {% if loop.index in params.logo_urls %}
+                    <div class="column-3">
+                        <a href="{{ params.logo_urls[loop.index] }}" target="_blank"><img src="{{ path }}" style="max-height:80px; width:auto; padding: 20px; margin: auto;  display: block;"></a>
+                    </div>
+                {% else %}
+                    <div class="column-3">
+                        <img src="{{ path }}" style="max-height:80px; width:auto; padding: 20px; margin: auto;  display: block;">
+                    </div>
+                {% endif %}
+
+                {% if loop.index % 4 == 0%}
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+    <!-- End of section -->
+
+
+{% endblock %}
+

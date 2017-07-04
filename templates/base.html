@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {% block title %}
+    <title>Directed Energy</title>
+    {% endblock %}
+
+    {% include 'metatag.html' %}
+
+    <!-- Links -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="{{ url_for('static', filename='img/general/favicon.png?v=1.1', _external=True) }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css', _external=True) }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', _external=True) }}">
+    {% block mainPageStyle %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/architect-styles.css', _external=True) }}">
+    {% endblock %}
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+
+    <!-- Default Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Sacramento%7CSource+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/min/jquery-min.js', _external=True) }}"></script>
+
+</head>
+<body>
+
+    {% if params['use_page_loader']%}
+        <!-- Page pre-loader -->
+        <div class="page-pre-loader">
+            <div class="page-pre-loader__container">
+                <div class="page-pre-loader__effect"></div>
+            </div>
+        </div>
+        <!-- End of page pre-loader -->
+    {% endif%}
+
+    {% include 'nav.html' %}
+
+    {% block body %}
+    <div class="grid-container padding-top-100">
+        <div class="grid-row">
+            <div class="column-12">
+             <h4>Hello, World!</h4>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    <footer class="background-color-2 padding-top-80 padding-bottom-60">
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="column-4 push-column-1"> <!-- push-column -->
+                    <a class="display-inline-block margin-right-10"><img src="{{ url_for('static', filename='img/logo-light.png') }}" alt="Directed Energy logo"></a>
+                    <a class="social-icon" href="https://www.facebook.com/profile.php?id=100010332439027" target="_blank"><i class="ion-social-facebook"></i></a>
+                    <a class="social-icon" href="https://twitter.com/Humanitychip" target="_blank"><i class="ion-social-twitter"></i></a>
+                    <a class="social-icon" href="https://www.instagram.com/humanitychip/" target="_blank"><i class="ion-social-instagram"></i></a>
+                    <a class="social-icon back-to-top" href="#"><i class="ion-ios-arrow-up"></i></a>
+                    <br><a class="link copyright">&copy; 2016 Directed Energy LLC all rights reserved.</a>
+                </div>
+
+                <div class="column-6">
+                    <h5 class="text-color-11">Sign up</h5>
+                    <p>
+                        Want to keep informed? Join our infrequent mailing list. We'll notify you with our latest updates, and will never spam you, nor sell your information.
+                    </p>
+                    <div class="mailchimp-signup">
+                        <form action="http://energy.us16.list-manage.com/subscribe/post?u=579f189371483cb10860788ad&amp;id=a6d054290e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate="">
+                            <input type="email" value="" name="EMAIL" class="mailchimp-signup__input mailchimp-signup__input-light" id="mce-EMAIL" placeholder="Email address" required>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div class="mailchimp-signup__input--hidden">
+                                    <input type="text" name="b_9340df1a07763013f113f9b2f_522cc2c275" tabindex="-1" value="">
+                            </div>
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button__small text-color-10 mailchimp-signup__input--submit mailchimp-signup__input--submit-light">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://maps.google.com/maps/api/js"></script>
+    <script src="{{ url_for('static', filename='js/min/main-min.js', _external=True) }}"></script>
+    <script src="{{ url_for('static', filename='js/min/scripts-min.js', _external=True) }}"></script>
+    
+</body>
+</html>
