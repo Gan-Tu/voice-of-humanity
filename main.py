@@ -1,4 +1,5 @@
 import os
+from configuration import *
 from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
@@ -9,15 +10,9 @@ def index():
     params = {
         "use_page_loader": True,
         "news_logos": list(),
-        "logo_urls": {
-            11: "https://www.space.com/33445-voices-of-humanity-kickstarter-interstellar-flight.html",
-            13: "https://uk.news.yahoo.com/kickstarter-project-aims-back-humanity-cosmic-cloud-183236176.html",
-            15: "https://www.wired.com/2016/07/physicists-want-send-dna-space-lasers/",
-            21: "https://www.noozhawk.com/article/voices_of_humanity_space_microchip_072716",
-            22: "http://www.popsci.com/humanity-chip-wants-to-send-your-time-capsule-into-space"
-        }
+        "logo_urls": logo_urls,
     }
-    for i in range(1, 23):
+    for i in range(1, logo_numbers + 1):
         path = "img/news/logo{0}.png".format(i)
         params["news_logos"].append(url_for("static", filename=path))
     return render_template('index.html', params=params)
