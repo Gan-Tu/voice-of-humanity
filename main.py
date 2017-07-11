@@ -1,6 +1,6 @@
 import os
 from configuration import *
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect
 app = Flask(__name__)
 
 
@@ -11,18 +11,19 @@ def index():
         "use_page_loader": True,
         "news_logos": list(),
         "logo_urls": logo_urls,
+        "subpage_nav": False
     }
     for i in range(1, logo_numbers + 1):
         path = "img/news/logo{0}.png".format(i)
         params["news_logos"].append(url_for("static", filename=path))
     return render_template('index.html', params=params)
 
-@app.route("/news")
-def news():
-    params = {
-        "use_page_loader": True
-    }
-    return render_template('placeholder.html', params=params)
+# @app.route("/news")
+# def news():
+#     params = {
+#         "use_page_loader": True
+#     }
+#     return render_template('placeholder.html', params=params)
 
 @app.route("/placeholder")
 def placeholder():
@@ -51,7 +52,7 @@ def store():
     params = {
         "use_page_loader": True
     }
-    return render_template('placeholder.html', params=params)
+    return redirect("https://store9398043.ecwid.com")
 
 # Projects
 
@@ -59,8 +60,9 @@ def store():
 def space_based_laser_applications():
     params = {
         "use_page_loader": True,
-        "background": "static/img/photo-original.png",
-        "use_subheadline": False
+        "background": "static/img/projects/laser3.jpg",
+        "use_subheadline": False,
+        'subpage_nav': True
     }
     return render_template('projects/space_based_laser_applications.html', params=params)
 
@@ -68,8 +70,9 @@ def space_based_laser_applications():
 def kickstarter():
     params = {
         "use_page_loader": True,
-        "background": "static/img/photo-original.png",
-        "use_subheadline": True
+        "background": "static/img/background/space0.jpg",
+        "use_subheadline": True,
+        'subpage_nav': True
     }
     return render_template('projects/kickstarter.html', params=params)
 
@@ -77,8 +80,9 @@ def kickstarter():
 def humanity_chip():
     params = {
         "use_page_loader": True,
-        "background": "static/img/photo-original.png",
-        "use_subheadline": False
+        "background": "static/img/background/space5.jpg",
+        "use_subheadline": False,
+        'subpage_nav': True
     }
     return render_template('projects/humanity_chip.html', params=params)
 
@@ -87,28 +91,35 @@ def humanity_chip():
 def about_us():
     params = {
         "use_page_loader": True,
-        "background": "static/img/photo-original.png",
-        "use_subheadline": False
+        "background": "static/img/background/space3.jpg",
+        "use_subheadline": False,
+        'subpage_nav': True,
+        "team_bio": list(),
     }
+    team = team_bio.copy()
+    for name in team:
+        team[name]["photo"] = url_for('static', filename=team[name]["photo"])
+    params["team_bio"] = team
     return render_template('about/about_us.html', params=params)
 
 @app.route("/technical_papers")
 def technical_papers():
     params = {
         "use_page_loader": True,
-        "background": "static/img/photo-original.png",
-        "use_subheadline": False
+        "background": "static/img/background/space2.jpg",
+        "use_subheadline": False,
+        'subpage_nav': True
     }
     return render_template('about/technical_papers.html', params=params)
 
-@app.route("/contact_us")
-def contact_us():
-    params = {
-        "use_page_loader": True,
-        "background": "static/img/photo-original.png",
-        "use_subheadline": False
-    }
-    return render_template('about/contact_us.html', params=params)
+# @app.route("/contact_us")
+# def contact_us():
+#     params = {
+#         "use_page_loader": True,
+#         "background": "static/img/photo-original.png",
+#         "use_subheadline": False
+#     }
+#     return render_template('about/contact_us.html', params=params)
 
 ##################### Main App #####################
 if __name__ == "__main__":

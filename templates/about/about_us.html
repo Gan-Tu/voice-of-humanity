@@ -6,8 +6,35 @@
 
 {% block subpage_title %} About Us {% endblock %}
 
-{% block subpage_description %} PLACEHOLDER {% endblock %}
-
 {% block subpage_body %}
+
+<h2>Founder’s Mission</h2>
+<p>Hi, We are the Co-Founders of Directed Energy and of the Voices of Humanity campaign! I am Philip Lubin, a professor of Physics at the University of California, Santa Barbara and I am Travis Brashears, Engineering Physics student at the University of California, Berkeley.</p>
+
+<p>For the past seven years, we have been working with directed energy systems and their applications to space exploration. We are so optimistic about the future of directed energy for non-traditional applications that we started a company outside of our university-research environment to continue to explore the applications of directed energy systems. This company is Directed Energy LLC.</p>
+
+<h2>Our Team</h2>
+{% macro render_person(p) %}
+    <div class="grid-row" style="padding:20px">
+        <div class="column-4">
+            <h4>{{p["name"]}}</h4>
+            <p><strong>{{p['title']}}</strong></p>
+            <img src="{{p['photo']}}">
+        </div>
+
+        <div class="column-8">
+            {% for b in p['bio'] %}
+                <div style="padding:10px">
+                    <h5>{{b}}</h5>
+                    <p>{{p['bio'][b]}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endmacro %}
+
+{% for name in params["team_bio"] %}
+    {{ render_person(params["team_bio"][name]) }}
+{% endfor %}
 
 {% endblock %}

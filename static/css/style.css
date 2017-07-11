@@ -2009,7 +2009,10 @@ p {
 }
 .primary-header__logo, .primary-header__logo-image {
 		overflow: hidden;
-		height: 100px;
+		height: 100px
+		/*height: 80%;
+		max-height: 80px;
+		padding:20px;*/
 }
 .primary-header__logo:hover, .primary-header__logo-image:hover {
 		opacity: 0.8;

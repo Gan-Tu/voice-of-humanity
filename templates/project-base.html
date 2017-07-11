@@ -4,6 +4,10 @@
     <title>PLACEHOLDER | Directed Energy</title>
 {% endblock %}
 
+{% block mainPageStyle %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/sub-page-styles.css') }}">
+{% endblock %}
+
 {% block body %}
 <section class="background-color-4 sub-header" style="background: url({{params['background']}})">
     <div class="grid-container">

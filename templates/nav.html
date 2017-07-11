@@ -1,9 +1,18 @@
+{% if params["subpage_nav"] %}
+<header class="primary-header primary-header--fixed-nav">
+{% else %}
 <header class="primary-header primary-header--fixed-nav background-color-10">
+{% endif %}
     <div class="grid-container">
         <div class="grid-row">
             <div class="column-12">
-                <div class="primary-header__logo float-left">
+                {% if params["subpage_nav"] %}
+                    <div class="float-left">
+                    <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo-light.png') }}" class="primary-header__logo-image" alt="Directed Energy Light Logo"></a>
+                {% else %}
+                    <div class="primary-header__logo float-left">
                     <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo-dark.png') }}" class="primary-header__logo-image" alt="Directed Energy Dark Logo"></a>
+                {% endif %}
                 </div>
                 <button class="mobile-nav-toggle float-right">
                     <span></span>
@@ -13,14 +22,11 @@
                         <li class="nav-item">
                             <a href="{{ url_for('index') }}">Home</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a href="{{ url_for('news') }}">News</a>
-                        </li> -->
                         <li class="nav-item has-submenu">
                             <a href="#">Projects</a>
                             <ul class="is-submenu">
-                                <li><a href="{{ url_for('space_based_laser_applications') }}">Laser Applications</a></li>
                                 <li><a href="{{ url_for('humanity_chip') }}">Humanity Chip</a></li>
+                                <li><a href="{{ url_for('space_based_laser_applications') }}">Laser Applications</a></li>
                                 <li><a href="{{ url_for('kickstarter') }}">Kickstarter</a></li>
                             </ul>
                         </li>
@@ -29,7 +35,6 @@
                             <ul class="is-submenu">
                                 <li><a href="{{ url_for('about_us') }}">About Us</a></li>
                                 <li><a href="{{ url_for('technical_papers') }}">Technical Papers</a></li>
-                                <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
