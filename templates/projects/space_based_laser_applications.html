@@ -1,16 +1,75 @@
-{% extends 'base.html' %}
+{% extends 'project-base.html' %}
 
 
 {% block title %}
-    <title>Space Based Laser Applications | Directed Energy</title>
+    <title>Space Based Laser Applicatoin | Directed Energy</title>
 {% endblock %}
 
-{% block body %}
-    <div class="grid-container padding-top-100">
-        <div class="grid-row">
-            <div class="column-12">
-             <h4>Space Based Laser Applications</h4>
-            </div>
+{% block subpage_title %} Directed Energy Propulsion for Relativistic Flight
+ {% endblock %}
+
+{% block subpage_body %}
+
+<h3>Overview</h3>
+
+<p>Applications of space based laser systems from relativistic propulsion that enable the first interstellar missions to defending the planet from asteroids and comets to long range power beaming to mitigating space debris among many others.</p>
+
+<p>Part of our background is working with directed energy (DE) systems with a goal of scaling to sufficiently larger powers and baselines using a MOPA design to allow photonic propulsion of small spacecraft to achieve relativistic speeds.</p> 
+
+<p>We have published a number of technical papers on this subject in our research group at UC Santa Barbara. See our links and papers below for a better understanding of this technology and the radical consequences that will come from it. </p>
+
+<h3>Relevant Research Links</h3>
+<p><b>Here are some of the research by our UC Santa Barbara group.<br> You can read more of our many technical papers under About > Technical Papers</b></p>
+
+<div class="grid-row">
+    <div class="column-9">
+        <p><a href="http://www.deepspace.ucsb.edu/projects/directed-energy-interstellar-precursors" class="link" target="_blank"><button class="button button--dark-ghost">NASA programs</button></a>
+        <a href="http://arxiv.org/abs/1604.01356" class="link" target="_blank"><button class="button button--dark-ghost">“A Roadmap to Interstellar Flight” – Lubin 2015</button></a></p>
+    </div>
+</div>
+
+<h3>Videos</h3>
+
+<div class="grid-row">
+    <div class="column-9 push-column-2 text-center">
+        
+        <div class="video_block">
+            <h5>NASA – DEEP-IN Webpage</h5>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/WCDuAiA6kX0" frameborder="0" allowfullscreen"></iframe>
+        </div>
+
+        <div class="video_block">
+            <h5>Interview with the Tennessee Valley Interstellar Workshop</h5>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/Nqlc1xb1So0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video_block">
+            <h5>Times Magazine Interview – Inside the Plan to go to the Stars</h5>
+            <p>Read the <a href="http://time.com/4292182/space-stars-yuri-milner/?xid=newsletter-brief" class="link" target="_blank">Full Interview with TIME Magazine</a></p>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/AZQlrkHhN-U" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+</div>
+
+<h3>The Interstellar Medium</h3>
+<figure class="blog-image">
+    <img src="{{url_for('static', filename='img/projects/interstellar_medium.jpg')}}" class="blog-image-inline" alt="interstellar medium">
+</figure>
+
+<h3>Directed Energy for Planetary Defense</h3>
+<figure class="blog-image">
+    <img src="{{url_for('static', filename='img/projects/laser2.png')}}" class="blog-image-inline" alt="laser 2 - Directed Energy for Planetary Defense">
+</figure>
+<p>At UC Santa Barbara we have done work on directed energy planetary defense since 2009. We have performed numerous laboratory measurements to test the effectiveness of directed energy planetary defense and published a large number of articles on the results. This technique is unique in that it can be operated without physically taking the system to the threat. This is known as a stand-off mode and allows the future possibility of complete planetary defense. <br><a href="http://www.deepspace.ucsb.edu/projects/directed-energy-planetary-defense" class="link" target="_blank"><button class="button button--dark-ghost">Learn more about the research</button></a></p>
+
+<h3>Directed Energy for Space Debris Mitigation</h3>
+<p>In order to get to the Interstellar Medium we must pave the way for further exploration in our own solar system. We plan to do this by implementing Directed Energy into Satellites to track space debris and then de-orbit or vaporize it as they cause an increasing threat to larger space missions in the future.</p>
+<div class="grid-row">
+    <div class="column-9 push-column-2 text-center">
+        <div class="video_block">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/0qmt_QH3YGg" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

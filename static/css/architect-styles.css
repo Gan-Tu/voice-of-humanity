@@ -931,7 +931,7 @@ p {
 .blog-image__caption {
 	margin-bottom: 1.5rem;
 	padding: 10px 0 10px;
-	border-bottom: 1px solid #97B6C5;
+	/*border-bottom: 1px solid #97B6C5;*/
 }
 
 .blog-masonry {

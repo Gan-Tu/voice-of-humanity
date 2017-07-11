@@ -58,21 +58,27 @@ def store():
 @app.route("/space_based_laser_applications")
 def space_based_laser_applications():
     params = {
-        "use_page_loader": True
+        "use_page_loader": True,
+        "background": "static/img/photo-original.png",
+        "use_subheadline": False
     }
     return render_template('projects/space_based_laser_applications.html', params=params)
 
 @app.route("/kickstarter")
 def kickstarter():
     params = {
-        "use_page_loader": True
+        "use_page_loader": True,
+        "background": "static/img/photo-original.png",
+        "use_subheadline": True
     }
     return render_template('projects/kickstarter.html', params=params)
 
 @app.route("/humanity_chip")
 def humanity_chip():
     params = {
-        "use_page_loader": True
+        "use_page_loader": True,
+        "background": "static/img/photo-original.png",
+        "use_subheadline": False
     }
     return render_template('projects/humanity_chip.html', params=params)
 
@@ -80,21 +86,27 @@ def humanity_chip():
 @app.route("/about_us")
 def about_us():
     params = {
-        "use_page_loader": True
+        "use_page_loader": True,
+        "background": "static/img/photo-original.png",
+        "use_subheadline": False
     }
     return render_template('about/about_us.html', params=params)
 
 @app.route("/technical_papers")
 def technical_papers():
     params = {
-        "use_page_loader": True
+        "use_page_loader": True,
+        "background": "static/img/photo-original.png",
+        "use_subheadline": False
     }
     return render_template('about/technical_papers.html', params=params)
 
 @app.route("/contact_us")
 def contact_us():
     params = {
-        "use_page_loader": True
+        "use_page_loader": True,
+        "background": "static/img/photo-original.png",
+        "use_subheadline": False
     }
     return render_template('about/contact_us.html', params=params)
 

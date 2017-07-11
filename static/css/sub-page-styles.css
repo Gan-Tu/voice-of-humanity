@@ -392,13 +392,6 @@ p {
 /* ========================================
 03. Backgrounds
 ======================================== */
-.sub-header-banner-1 {
-		background: url(../img/subpages/sub-header__banner-1.jpg);
-}
-.sub-header-banner-2 {
-		background: url(../img/subpages/sub-header__banner-2.jpg);
-}
-
 .icon-box__background-image-1 {
 		background: url(../img/subpages/sub-page__icon-box-background-1.jpg);
 }
@@ -1031,7 +1024,7 @@ p {
 .blog-image__caption {
 		margin-bottom: 1.5rem;
 		padding: 10px 0 10px;
-		border-bottom: 1px solid #f8f8fa;
+		/*border-bottom: 1px solid #f8f8fa;*/
 }
 
 .blog-masonry {

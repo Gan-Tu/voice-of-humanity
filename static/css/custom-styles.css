@@ -40,3 +40,25 @@
     top: 5px;
 }
 
+.blog-image-inline {
+    max-height: 400px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: auto;
+    margin-bottom: 40px 
+}
+
+.blog-image__caption {
+    text-align: center
+}
+
+.link {
+    text-decoration: none;
+}
+
+.video_block {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important
+}
+
+

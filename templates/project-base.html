@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>PLACEHOLDER | Directed Energy</title>
+{% endblock %}
+
+{% block body %}
+<section class="background-color-4 sub-header" style="background: url({{params['background']}})">
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="column-12 animated-parent">
+                <h2 class="text-color-10 animated animate__fade-in-left-short">{% block subpage_title %}PLACEHOLDER{% endblock %}</h2>
+                <h5 class="text-uppercase text-color-10 animated animate__fade-in-right-short">
+                {% if params["use_subheadline"] %}<span class="text-decor animated animate__roll-in"></span>{% block subpage_description %}PLACEHOLDER{% endblock %}{% endif %}
+                </h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<article class="margin-top-100 margin-bottom-100">
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="column-10 push-column-1">
+                {% block subpage_body %}
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque dui, eleifend nec nulla eget, ornare tincidunt elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam placerat nunc in sagittis rhoncus. In vestibulum mollis libero, vitae faucibus odio iaculis vitae. Pellentesque a tempus nulla. Maecenas pharetra odio eget suscipit sodales. Mauris gravida, enim et rhoncus luctus, lacus felis vulputate velit, ut convallis nisi purus gravida risus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque dui, eleifend nec nulla eget, ornare tincidunt elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam placerat nunc in sagittis rhoncus. In vestibulum mollis libero, vitae faucibus odio iaculis vitae.
+                    </p>
+                    <figure class="blog-image">
+                        <img src="{{url_for('static', filename='img/blog/blog__single-page-image-1.jpg')}}" alt="A Blog entry picture">
+                        <figcaption class="blog-image__caption">PLACEHOLDER</figcaption>
+                    </figure>
+                    <blockquote class="blockquote" cite="http://somesite.com">
+                        <p>
+                        PLACEHOLDER
+                        </p>
+                        <footer>PLACEHOLDER</footer>
+                    </blockquote>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock %}

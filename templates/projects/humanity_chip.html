@@ -1,16 +1,44 @@
-{% extends 'base.html' %}
+{% extends 'project-base.html' %}
 
 
 {% block title %}
     <title>Humanity Chip | Directed Energy</title>
 {% endblock %}
 
-{% block body %}
-    <div class="grid-container padding-top-100">
-        <div class="grid-row">
-            <div class="column-12">
-             <h4>Humanity Chip</h4>
-            </div>
-        </div>
-    </div>
+{% block subpage_title %} Humanity Chip {% endblock %}
+
+{% block subpage_description %} The first space time capsule that will include all of humanities thoughts, images, and DNA. {% endblock %}
+
+{% block subpage_body %}
+
+<h5>The first space time capsule that will include all of humanities thoughts, images, and DNA.</h5>
+
+<h2>The Basic Idea</h2>
+<p>Our goal is to directly engage all humanity in space exploration. We want to send your dreams and aspirations to the stars! With our basic funding goal of $30,000, we will put your data on a custom spacecraft that will be launched in 2017 initially into Low Earth Orbit (LEO), then to more distant missions to the moon, Mars, etc in subsequent missions. Once we reach our stretch goal of $100,000, we will be able to build a sophisticated ground-based laser and robotic telescope that allows your data to be optionally transmitted via laser to the target of your choice in space. We will then be able to “beam you up” by encoding and sending your data to the stars so you will travel at the speed of light into the universe. In both cases, we will be able to “back up humanity”, using the universe as our “cloud” with your images, pictures, text, tweets, video, and DNA! Your data will live forever in the universe. You will be immortalized.</p>
+<figure class="blog-image">
+    <img src="{{url_for('static', filename='img/projects/humanity_chip_data_graphics.png')}}" class="blog-image-inline" alt="Humanity Chip Data Graphics">
+</figure>
+<figcaption class="blog-image__caption">Humanity Chip Data Graphics</figcaption>
+
+<p><b>Voices of Humanity is brought to you</b> by is brought to you by the same people that are working on the recently announced laser propelled, first interstellar missions through the DE-STAR project at University of California Santa Barbara and the NASA Innovative Advanced Concepts (NIAC) funded project Phase I DEEP-IN and Phase II DEIS programs.Professor Philip Lubin is the leading scientist on all of these projects and is a professor at UC Santa Barbara. Travis Brashears has worked with Prof. Lubin on all of these projects and is now an Engineering Physics major at UC Berkeley. Our long term goal is to enable the first interstellar missions and to eventually place the Voices of Humanity on those missions as emissaries of the Earth.</p>
+<figure class="blog-image">
+    <img src="{{url_for('static', filename='img/projects/wafer.jpg')}}" class="blog-image-inline" alt="Wafer Sat">
+</figure>
+<figure class="blog-image">
+    <img src="{{url_for('static', filename='img/projects/wafer2.png')}}" class="blog-image-inline" alt="Wafer Sat 2">
+</figure>
+
+<h2>Humanity Chip</h2>
+<p>Please join us for the maiden voyage of Humanity Chip in 2016. The first Humanity Chips will definitely be a collectors item. Once we reach our stretch goal we will  offer the “Beam Me Up”  option to send your data via laser to the star, exoplanet, solar system object (planet, moon or asteroid), galaxy or black hole of your choice. Imagine your data getting to the Moon in about 1 second or to Mars in about 10 minutes or less or to the Voyager spacecraft in less than a day or to the nearest exoplanet in about 4 years. You data will live forever. Your memories will be immortal. Data options will include Twitter tweets, stories, documents, poems, pictures, movies, DNA sequencing etc. We will even sequence your unique DNA and that of your loved ones and send it together. You can sponsor friends and family or entire classrooms, schools or organizations. Makes a wonderful and everlasting gift. Make history – be on the Voices of Humanity Chip.</p>
+
+<h2>Our Vision</h2>
+<p>The Voices of Humanity campaign’s purpose is to give a voice to all of humanity far beyond our home and to immortalize those voices forever. In this way your voice will literally live forever. The Voices of Humanity campaign will send your dreams and aspirations out into the universe to be immortalized forever. Everyone that wants to participate will be able to participate. No one will be excluded. Our goal is to send humanity to the stars first with transmitted data and then with physical media. In a sense we will “back up humanity” and use the universe as our “cloud”. We hope that you will share our vision and join us on this journey.</p>
+
+<h2>Why?</h2>
+<p>We want to push the Interstellar travel frontier and revolutionize access to space by making small Wafer-Scaled Spacecrafts. <b>By pledging to this campaign you will become part of that journey.</b></p>
+<figure class="blog-image">
+    <img src="{{url_for('static', filename='img/projects/laser.png')}}" class="blog-image-inline" alt="Laser">
+</figure>
+<p>This is but the first phase as the Voices of Humanity Campaign is not static. We will grow and evolve as you do. As technology advances we will advance, allowing increasingly sophisticated levels of data to be added and additional Humanity Chips to be launched and new data to be “beamed up”. We want to initially send the Humanity Chip into orbit around Earth, then to Mars, and then put it the first spacecraft to Alpha Centauri in 2069.</p>
+
 {% endblock %}
